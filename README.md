@@ -1,6 +1,6 @@
 # Dashboard Desktop
 
-<img align="right" width="500px" src="" />
+<img align="right" width="500px" src="https://user-images.githubusercontent.com/60843113/160237347-21bb879e-174d-4075-8318-719d705b6d89.png" />
 
 <h2>Tecnologias</h2>
 <p>Esse projeto foi desenvolvido com as seguintes tecnologias:</p>
