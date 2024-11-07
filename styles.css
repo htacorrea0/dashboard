@@ -504,22 +504,12 @@ main {
 
 #demographic .progress-bar-group .first,
 #demographic .age-group .first-circle {
-  background-color: #fd1f9b;
+  background-color: rgba(122, 235, 250, 1);
 }
 
 #demographic .progress-bar-group .second,
 #demographic .age-group .second-circle {
-  background-color: #017efa;
-}
-
-#demographic .progress-bar-group .third,
-#demographic .age-group .third-circle {
-  background-color: #30d987;
-}
-
-#demographic .progress-bar-group .fourth,
-#demographic .age-group .fourth-circle {
-  background-color: #6342ff;
+  background-color: rgba(165, 165, 165, 1);
 }
 
 #demographic .age-group div {
@@ -570,16 +560,6 @@ main {
   box-shadow: 0 5px 10px rgba(241, 242, 250, 1);
 }
 
-#top-channels .head {
-  display: flex;
-  padding: 1rem 1.5rem;
-}
-
-#top-channels .head p:nth-child(1) {
-  padding-left: 0.5rem;
-  padding-right: 6.5rem;
-}
-
 #top-channels .channel {
   padding: 0 1.5rem 0.5rem 1.5rem;
 }
@@ -592,40 +572,39 @@ main {
   background-color: #fafafa;
 }
 
-#top-channels .channel > div img {
-  width: 1.5rem;
-  height: 1.5rem;
-}
 
-#top-channels .channel > div h4 {
-  font-family: var(--font);
-  font-weight: bold 700;
-  font-size: 0.85rem;
-  color: #313131;
-  width: 7rem;
-  padding-left: 0.25rem;
-}
-
-#top-channels .channel > div h4 + h4 {
-  width: auto;
-  padding-right: 0.5rem;
-}
-
-#top-channels .channel > div p {
+.box{
+  background: #ffffff;
+  width: 400px;
+  height: 300px;
+  padding: 20px;
+  display: flex;
+  margin-left: 130px;
+  gap: 70px;
   font-family: var(--font);
   font-weight: 600;
-  font-size: 0.85rem;
-  color: #30d987;
-  padding-right: 0.75rem;
+  font-size: 1rem;
+  align-items: flex-end;
 }
 
-#top-channels .channel .container-bar {
-  width: 8rem;
-  height: 1.3rem;
+.bar-1{
+  background: #75b3f0;
+  color: #000;
+  height: 130px;
+  width: 70px;
+  position: relative;
 }
 
-#top-channels .channel .container-bar .progress-bar {
-  height: 100%;
-  border-radius: 0.25rem;
-  background-color: #51cbff;
+.bar-2{
+  background: #8b2424;
+  color: #000;
+  height: 180px;
+  width: 70px;
+  position: relative;
+}
+
+span{
+  position: absolute;
+  bottom: -30px;
+  left: 20px;
 }

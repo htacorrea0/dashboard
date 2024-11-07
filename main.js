@@ -20,10 +20,8 @@ button.addEventListener('click', () => {
 
 // --- BAR CHART | DEMOGRAPHIC --- //
 const demographic = {
-  first: 30,
-  second: 42,
-  third: 18,
-  fourth: 10
+  first: 83,
+  second: 27
 }
 
 const progressBars = document.querySelectorAll('.progress-bar-group div')
@@ -59,15 +57,16 @@ for (let channel of channels) {
 const doughnutChart = document.getElementById('myChart')
 
 const dataDoughnut = {
-  labels: ['Male', 'Female', 'Other'],
+  labels: ['Amônia', 'CO2', 'Benzeno', 'Óxido Nítrico'],
   datasets: [
     {
-      label: 'Demographic',
-      data: [53, 35, 12],
+      label: 'Ranking e Umidade',
+      data: [33.16, 25.69, 23.68, 17.47],
       backgroundColor: [
+        'rgba(253, 31, 155, 1)',
+        'rgba(48, 217, 135, 1)',
         'rgba(1, 126, 250, 1)',
-        'rgba(81, 203, 255, 1)',
-        'rgba(48, 216, 135, 1)'
+        'rgba(255, 251, 10, 1)'
       ],
       hoverOffset: 4,
       cutout: '60%'
@@ -111,39 +110,58 @@ const lineChart = document.getElementById('chartMain')
 
 const dataLine = {
   labels: [
-    'Jan',
-    'Fev',
-    'Mar',
-    'Apr',
-    'Mei',
-    'Jun',
-    'Jul',
-    'Aug',
-    'Sep',
-    'Oct',
-    'Nov',
-    'Dec'
+    '0h',
+    '1h',
+    '2h',
+    '3h',
+    '4h',
+    '5h',
+    '6h',
+    '7h',
+    '8h',
+    '9h',
+    '10h',
+    '11h',
+    '12h',
+    '13h',
+    '14h',
+    '15h',
+    '16h',
+    '17h',
+    '18h',
+    '19h',
+    '20h',
+    '21h',
+    '22h',
+    '23h'
   ],
   datasets: [
     {
-      label: 'Reach',
-      data: [65, 92, 53, 114, 72, 98, 185, 176, 99, 135, 152, 147],
+      label: 'Amônia',
+      data: [302, 357, 249, 299, 332, 294, 394, 249, 315, 349, 288, 401, 256, 359, 348, 254, 298, 314, 248, 375, 225, 236, 245, 225],
       backgroundColor: 'rgba(1, 126, 250, 1)',
       borderColor: 'rgba(1, 126, 250, 1)',
       borderWidth: 2
     },
     {
-      label: 'Paid Reach',
-      data: [49, 111, 102, 49, 58, 140, 133, 115, 128, 89, 138, 190],
+      label: 'CO2',
+      data: [382, 257, 235, 359, 369, 410, 253, 347, 265, 235, 349, 316, 369, 298, 489, 348, 421, 235, 286, 335, 289, 359, 346, 321],
       backgroundColor: 'rgba(48, 217, 135, 1)',
       borderColor: 'rgba(48, 217, 135, 1)',
       borderWidth: 2
     },
     {
-      label: 'Organic Reach',
-      data: [22, 48, 41, 53, 82, 64, 55, 47, 50, 62, 58, 84],
+      label: 'Benzeno',
+      data: [423, 367, 492, 388, 315, 458, 475, 334, 409, 311, 482, 440, 394, 328, 412, 358, 499, 468, 423, 337, 461, 375, 341, 448],
       backgroundColor: 'rgba(253, 31, 155, 1)',
       borderColor: 'rgba(253, 31, 155, 1)',
+      borderWidth: 2
+    },
+    {
+      label: 'Óxido nítrico',
+      data: [187, 120, 255, 92, 174, 238, 211, 153, 276, 196, 275, 125, 184, 245, 221, 151, 265, 208, 256, 278, 124, 289, 260, 169],
+      backgroundColor: 'rgba(255, 251, 10, 1)',
+      borderColor: 'rgba(255, 251, 10, 1)',
       borderWidth: 2
     }
   ]
@@ -159,8 +177,8 @@ const genericOptions = {
     x: { grid: { display: false } },
     y: {
       min: 0,
-      max: 200,
-      ticks: { stepSize: 50 },
+      max: 600,
+      ticks: { stepSize: 100 },
       grid: { borderDash: [5, 5] }
     }
   },
@@ -196,10 +214,10 @@ const genericOptions = {
       usePointStyle: true,
       callbacks: {
         title: ctx => {
-          return `${ctx[0].label} 2021`
+          return `${ctx[0].label}`
         },
         label: ctx => {
-          return `${ctx.dataset.label}:  ${ctx.raw}K`
+          return `${ctx.dataset.label}:  ${ctx.raw} ppm`
         }
       }
     }
