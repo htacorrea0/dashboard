@@ -204,7 +204,7 @@ const configDoughnut_Month = {
 }
 
 const myChart = new Chart(doughnutChart, configDoughnut)
-
+//let random = Math.floor(Math.random() * (412 - 287));
 // Line //
 const lineChart = document.getElementById('chartMain')
 
@@ -297,28 +297,28 @@ const dataLine_Week = {
   datasets: [
     {
       label: 'Amônia',
-      data: [302, 357, 249, 299, 332, 294, 394, 249, 315, 349, 288, 401, 256, 359, 348, 254, 298, 314, 248, 375, 225, 236, 245, 225],
+      data: [305, 360, 252, 122, 335, 297, 397, 252, 318, 433, 291, 404, 259, 362, 351, 257, 301, 317, 251, 378, 228, 239, 248, 228],
       backgroundColor: 'rgba(1, 126, 250, 1)',
       borderColor: 'rgba(1, 126, 250, 1)',
       borderWidth: 2
     },
     {
       label: 'CO2',
-      data: [382, 257, 235, 359, 369, 410, 253, 347, 265, 235, 349, 316, 369, 298, 489, 348, 421, 235, 286, 335, 289, 359, 346, 321],
+      data: [385, 260, 238, 362, 222, 413, 256, 123, 268, 238, 352, 319, 372, 301, 492, 351, 300, 238, 289, 338, 292, 362, 349, 324],
       backgroundColor: 'rgba(48, 217, 135, 1)',
       borderColor: 'rgba(48, 217, 135, 1)',
       borderWidth: 2
     },
     {
       label: 'Benzeno',
-      data: [423, 367, 492, 388, 315, 458, 475, 334, 409, 311, 482, 440, 394, 328, 412, 358, 499, 468, 423, 337, 461, 375, 341, 448],
+      data: [426, 370, 495, 391, 318, 461, 478, 337, 412, 314, 485, 443, 397, 331, 415, 361, 502, 471, 426, 340, 464, 378, 344, 451],
       backgroundColor: 'rgba(253, 31, 155, 1)',
       borderColor: 'rgba(253, 31, 155, 1)',
       borderWidth: 2
     },
     {
       label: 'Óxido nítrico',
-      data: [187, 120, 255, 92, 174, 238, 211, 153, 276, 196, 275, 125, 184, 245, 221, 151, 265, 208, 256, 278, 124, 289, 260, 169],
+      data: [190, 123, 258, 95, 177, 241, 214, 156, 279, 199, 278, 128, 187, 248, 224, 154, 268, 211, 259, 281, 127, 292, 263, 172],
       backgroundColor: 'rgba(255, 251, 10, 1)',
       borderColor: 'rgba(255, 251, 10, 1)',
       borderWidth: 2
@@ -356,28 +356,28 @@ const dataLine_Month = {
   datasets: [
     {
       label: 'Amônia',
-      data: [302, 357, 249, 299, 332, 294, 394, 249, 315, 349, 288, 401, 256, 359, 348, 254, 298, 314, 248, 375, 225, 236, 245, 225],
+      data: [305, 360, 252, 302, 335, 297, 397, 252, 318, 352, 291, 404, 259, 362, 351, 257, 301, 317, 251, 378, 228, 239, 248, 228],
       backgroundColor: 'rgba(1, 126, 250, 1)',
       borderColor: 'rgba(1, 126, 250, 1)',
       borderWidth: 2
     },
     {
       label: 'CO2',
-      data: [382, 257, 235, 359, 369, 410, 253, 347, 265, 235, 349, 316, 369, 298, 489, 348, 421, 235, 286, 335, 289, 359, 346, 321],
+      data: [385, 260, 238, 362, 372, 200, 256, 350, 268, 238, 352, 319, 372, 301, 398, 351, 424, 238, 289, 338, 292, 362, 349, 324],
       backgroundColor: 'rgba(48, 217, 135, 1)',
       borderColor: 'rgba(48, 217, 135, 1)',
       borderWidth: 2
     },
     {
       label: 'Benzeno',
-      data: [423, 367, 492, 388, 315, 458, 475, 334, 409, 311, 482, 440, 394, 328, 412, 358, 499, 468, 423, 337, 461, 375, 341, 448],
+      data: [426, 370, 495, 391, 318, 461, 478, 337, 412, 150, 100, 443, 397, 331, 415, 361, 502, 471, 426, 340, 464, 378, 344, 451],
       backgroundColor: 'rgba(253, 31, 155, 1)',
       borderColor: 'rgba(253, 31, 155, 1)',
       borderWidth: 2
     },
     {
       label: 'Óxido nítrico',
-      data: [187, 120, 255, 92, 174, 238, 211, 153, 276, 196, 275, 125, 184, 245, 221, 151, 265, 208, 256, 278, 124, 289, 260, 169],
+      data: [190, 123, 258, 95, 177, 241, 214, 156, 120, 199, 278, 128, 500, 120, 224, 154, 268, 211, 259, 281, 127, 292, 263, 172],
       backgroundColor: 'rgba(255, 251, 10, 1)',
       borderColor: 'rgba(255, 251, 10, 1)',
       borderWidth: 2
@@ -515,6 +515,10 @@ function mudaFiltro(filtro) {
   const filtros = document.querySelectorAll(".filter");
   const titGrafico = document.querySelector(".text-reach h3");
   const titBarra = document.querySelector(".title-audience");
+  const barOne = document.querySelector(".bar-1");
+  const barTwo = document.querySelector(".bar-2");
+  const barVal1 = document.querySelector(".barra_minimo");
+  const barVal2 = document.querySelector(".barra_maximo");
 
   if(!filtro.classList.contains("selected")){
 
@@ -528,6 +532,10 @@ function mudaFiltro(filtro) {
     if(filtro.getAttribute("aria-label") == "day"){
       titGrafico.innerHTML = "Análise do dia";
       titBarra.innerHTML = "Média de umidade do dia";
+      barVal1.innerHTML = "27°C";
+      barVal2.innerHTML = "35°C";
+      barOne.style.height = "130px";
+      barTwo.style.height = "180px";
 
       myChart.config.data = dataDoughnut;
       myChart.update();
@@ -548,6 +556,10 @@ function mudaFiltro(filtro) {
     if(filtro.getAttribute("aria-label") == "week"){
       titGrafico.innerHTML = "Análise da semana";
       titBarra.innerHTML = "Média de umidade da semana";
+      barVal1.innerHTML = "25°C";
+      barVal2.innerHTML = "38°C";
+      barOne.style.height = "100px";
+      barTwo.style.height = "170px";
 
       myChart.config.data = dataDoughnut_Week;
       myChart.update();
@@ -568,6 +580,10 @@ function mudaFiltro(filtro) {
     if(filtro.getAttribute("aria-label") == "month"){
       titGrafico.innerHTML = "Análise do mês";
       titBarra.innerHTML = "Média de umidade do mês";
+      barVal1.innerHTML = "30°C";
+      barVal2.innerHTML = "32°C";
+      barOne.style.height = "140px";
+      barTwo.style.height = "150px";
 
       myChart.config.data = dataDoughnut_Month;
       myChart.update();
