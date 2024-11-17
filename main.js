@@ -24,6 +24,16 @@ const demographic = {
   second: 27
 }
 
+const demographic_Week = {
+  first: 22,
+  second: 78
+}
+
+const demographic_Month = {
+  first: 90,
+  second: 10
+}
+
 const progressBars = document.querySelectorAll('.progress-bar-group div')
 
 for (let progressBar of progressBars) {
@@ -73,10 +83,100 @@ const dataDoughnut = {
     }
   ]
 }
+const dataDoughnut_Week = {
+  labels: ['Amônia', 'CO2', 'Benzeno', 'Óxido Nítrico'],
+  datasets: [
+    {
+      label: 'Ranking e Umidade',
+      data: [10, 10, 40, 40],
+      backgroundColor: [
+        'rgba(253, 31, 155, 1)',
+        'rgba(48, 217, 135, 1)',
+        'rgba(1, 126, 250, 1)',
+        'rgba(255, 251, 10, 1)'
+      ],
+      hoverOffset: 4,
+      cutout: '60%'
+    }
+  ]
+}
+const dataDoughnut_Month = {
+  labels: ['Amônia', 'CO2', 'Benzeno', 'Óxido Nítrico'],
+  datasets: [
+    {
+      label: 'Ranking e Umidade',
+      data: [25,25,25,25],
+      backgroundColor: [
+        'rgba(253, 31, 155, 1)',
+        'rgba(48, 217, 135, 1)',
+        'rgba(1, 126, 250, 1)',
+        'rgba(255, 251, 10, 1)'
+      ],
+      hoverOffset: 4,
+      cutout: '60%'
+    }
+  ]
+}
 
 const configDoughnut = {
   type: 'doughnut',
   data: dataDoughnut,
+  options: {
+    responsive: true,
+
+    plugins: {
+      legend: {
+        position: 'bottom',
+        labels: {
+          font: {
+            family: "'Poppins', 'sans-serif'",
+            size: 10,
+            weight: 400
+          },
+          padding: 15,
+          color: 'rgba(0, 0, 0, 1)',
+          usePointStyle: true
+        }
+      },
+      tooltip: {
+        enable: false,
+        position: 'average',
+        external: 'abc'
+      }
+    }
+  }
+}
+const configDoughnut_Week = {
+  type: 'doughnut',
+  data: dataDoughnut_Week,
+  options: {
+    responsive: true,
+
+    plugins: {
+      legend: {
+        position: 'bottom',
+        labels: {
+          font: {
+            family: "'Poppins', 'sans-serif'",
+            size: 10,
+            weight: 400
+          },
+          padding: 15,
+          color: 'rgba(0, 0, 0, 1)',
+          usePointStyle: true
+        }
+      },
+      tooltip: {
+        enable: false,
+        position: 'average',
+        external: 'abc'
+      }
+    }
+  }
+}
+const configDoughnut_Month = {
+  type: 'doughnut',
+  data: dataDoughnut_Month,
   options: {
     responsive: true,
 
@@ -109,6 +209,124 @@ const myChart = new Chart(doughnutChart, configDoughnut)
 const lineChart = document.getElementById('chartMain')
 
 const dataLine = {
+  labels: [
+    '0h',
+    '1h',
+    '2h',
+    '3h',
+    '4h',
+    '5h',
+    '6h',
+    '7h',
+    '8h',
+    '9h',
+    '10h',
+    '11h',
+    '12h',
+    '13h',
+    '14h',
+    '15h',
+    '16h',
+    '17h',
+    '18h',
+    '19h',
+    '20h',
+    '21h',
+    '22h',
+    '23h'
+  ],
+  datasets: [
+    {
+      label: 'Amônia',
+      data: [302, 357, 249, 299, 332, 294, 394, 249, 315, 349, 288, 401, 256, 359, 348, 254, 298, 314, 248, 375, 225, 236, 245, 225],
+      backgroundColor: 'rgba(1, 126, 250, 1)',
+      borderColor: 'rgba(1, 126, 250, 1)',
+      borderWidth: 2
+    },
+    {
+      label: 'CO2',
+      data: [382, 257, 235, 359, 369, 410, 253, 347, 265, 235, 349, 316, 369, 298, 489, 348, 421, 235, 286, 335, 289, 359, 346, 321],
+      backgroundColor: 'rgba(48, 217, 135, 1)',
+      borderColor: 'rgba(48, 217, 135, 1)',
+      borderWidth: 2
+    },
+    {
+      label: 'Benzeno',
+      data: [423, 367, 492, 388, 315, 458, 475, 334, 409, 311, 482, 440, 394, 328, 412, 358, 499, 468, 423, 337, 461, 375, 341, 448],
+      backgroundColor: 'rgba(253, 31, 155, 1)',
+      borderColor: 'rgba(253, 31, 155, 1)',
+      borderWidth: 2
+    },
+    {
+      label: 'Óxido nítrico',
+      data: [187, 120, 255, 92, 174, 238, 211, 153, 276, 196, 275, 125, 184, 245, 221, 151, 265, 208, 256, 278, 124, 289, 260, 169],
+      backgroundColor: 'rgba(255, 251, 10, 1)',
+      borderColor: 'rgba(255, 251, 10, 1)',
+      borderWidth: 2
+    }
+  ]
+}
+
+const dataLine_Week = {
+  labels: [
+    '0h',
+    '1h',
+    '2h',
+    '3h',
+    '4h',
+    '5h',
+    '6h',
+    '7h',
+    '8h',
+    '9h',
+    '10h',
+    '11h',
+    '12h',
+    '13h',
+    '14h',
+    '15h',
+    '16h',
+    '17h',
+    '18h',
+    '19h',
+    '20h',
+    '21h',
+    '22h',
+    '23h'
+  ],
+  datasets: [
+    {
+      label: 'Amônia',
+      data: [302, 357, 249, 299, 332, 294, 394, 249, 315, 349, 288, 401, 256, 359, 348, 254, 298, 314, 248, 375, 225, 236, 245, 225],
+      backgroundColor: 'rgba(1, 126, 250, 1)',
+      borderColor: 'rgba(1, 126, 250, 1)',
+      borderWidth: 2
+    },
+    {
+      label: 'CO2',
+      data: [382, 257, 235, 359, 369, 410, 253, 347, 265, 235, 349, 316, 369, 298, 489, 348, 421, 235, 286, 335, 289, 359, 346, 321],
+      backgroundColor: 'rgba(48, 217, 135, 1)',
+      borderColor: 'rgba(48, 217, 135, 1)',
+      borderWidth: 2
+    },
+    {
+      label: 'Benzeno',
+      data: [423, 367, 492, 388, 315, 458, 475, 334, 409, 311, 482, 440, 394, 328, 412, 358, 499, 468, 423, 337, 461, 375, 341, 448],
+      backgroundColor: 'rgba(253, 31, 155, 1)',
+      borderColor: 'rgba(253, 31, 155, 1)',
+      borderWidth: 2
+    },
+    {
+      label: 'Óxido nítrico',
+      data: [187, 120, 255, 92, 174, 238, 211, 153, 276, 196, 275, 125, 184, 245, 221, 151, 265, 208, 256, 278, 124, 289, 260, 169],
+      backgroundColor: 'rgba(255, 251, 10, 1)',
+      borderColor: 'rgba(255, 251, 10, 1)',
+      borderWidth: 2
+    }
+  ]
+}
+
+const dataLine_Month = {
   labels: [
     '0h',
     '1h',
@@ -277,4 +495,95 @@ const configLine = {
   plugins: [annotationLine, lineDash]
 }
 
+const configLine_Week = {
+  type: 'line',
+  data: dataLine_Week,
+  options: genericOptions,
+  plugins: [annotationLine, lineDash]
+}
+
+const configLine_Month = {
+  type: 'line',
+  data: dataLine_Month,
+  options: genericOptions,
+  plugins: [annotationLine, lineDash]
+}
+
 const chartMain = new Chart(lineChart, configLine)
+
+function mudaFiltro(filtro) {
+  const filtros = document.querySelectorAll(".filter");
+  const titGrafico = document.querySelector(".text-reach h3");
+  const titBarra = document.querySelector(".title-audience");
+
+  if(!filtro.classList.contains("selected")){
+
+    for(let i=0;i < filtros.length;i++){
+      if(filtros[i].classList.contains("selected")){
+        filtros[i].classList.remove("selected");
+      }
+    }
+
+    filtro.classList.add("selected");
+    if(filtro.getAttribute("aria-label") == "day"){
+      titGrafico.innerHTML = "Análise do dia";
+      titBarra.innerHTML = "Média de umidade do dia";
+
+      myChart.config.data = dataDoughnut;
+      myChart.update();
+
+      chartMain.config.data = dataLine;
+      chartMain.update();
+
+      for (let progressBar of progressBars) {
+        const progressBarName = progressBar.className
+      
+        progressBar.setAttribute(
+          'style',
+          `width: ${demographic[`${progressBarName}`]}%`
+        )
+      }
+    }
+
+    if(filtro.getAttribute("aria-label") == "week"){
+      titGrafico.innerHTML = "Análise da semana";
+      titBarra.innerHTML = "Média de umidade da semana";
+
+      myChart.config.data = dataDoughnut_Week;
+      myChart.update();
+
+      chartMain.config.data = dataLine_Week;
+      chartMain.update();
+
+      for (let progressBar of progressBars) {
+        const progressBarName = progressBar.className
+      
+        progressBar.setAttribute(
+          'style',
+          `width: ${demographic_Week[`${progressBarName}`]}%`
+        )
+      }
+    }
+
+    if(filtro.getAttribute("aria-label") == "month"){
+      titGrafico.innerHTML = "Análise do mês";
+      titBarra.innerHTML = "Média de umidade do mês";
+
+      myChart.config.data = dataDoughnut_Month;
+      myChart.update();
+
+      chartMain.config.data = dataLine_Month;
+      chartMain.update();
+
+      for (let progressBar of progressBars) {
+        const progressBarName = progressBar.className
+      
+        progressBar.setAttribute(
+          'style',
+          `width: ${demographic_Month[`${progressBarName}`]}%`
+        )
+      }
+    }
+  }
+  
+}
