@@ -643,6 +643,7 @@ span{
 
 .d {
   position: absolute;
+  z-index: -1;
 }
 
 @media (max-width: 1455px) {
