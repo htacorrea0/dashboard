@@ -1,7 +1,7 @@
 // --- ITEM SELECTED | SIDE MENU --- //
-const menuItems = document.querySelectorAll('.component')
+//const menuItems = document.querySelectorAll('.component')
 
-menuItems.forEach(item =>
+/*menuItems.forEach(item =>
   item.addEventListener('click', function () {
     menuItems.forEach(item => item.classList.remove('selected'))
     this.classList.add('selected')
@@ -17,7 +17,7 @@ button.addEventListener('click', () => {
   sideMenu.classList.toggle('hidden')
   container.classList.toggle('changed')
 })
-
+*/
 // --- BAR CHART | DEMOGRAPHIC --- //
 const demographic = {
   first: 83,
@@ -414,17 +414,17 @@ const genericOptions = {
   plugins: {
     legend: { display: false },
     tooltip: {
-      padding: 16,
+      padding: 12,
       titleFont: {
         family: "'Poppins', 'sans-serif'",
-        size: 16,
+        size: 12,
         weight: 'normal'
       },
       backgroundColor: 'rgba(8, 26, 81, 1)',
       bodyColor: 'rgba(255, 255, 255, 0.7)',
       bodyFont: {
         family: "'Poppins', 'sans-serif'",
-        size: 15
+        size: 11
       },
       bodySpacing: 8,
       boxHeight: 6,
