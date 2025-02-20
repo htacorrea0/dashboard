@@ -1,7 +1,7 @@
 // --- ITEM SELECTED | SIDE MENU --- //
-//const menuItems = document.querySelectorAll('.component')
+const menuItems = document.querySelectorAll('.component')
 
-/*menuItems.forEach(item =>
+*menuItems.forEach(item =>
   item.addEventListener('click', function () {
     menuItems.forEach(item => item.classList.remove('selected'))
     this.classList.add('selected')
