@@ -1,7 +1,7 @@
 // --- ITEM SELECTED | SIDE MENU --- //
-const menuItems = document.querySelectorAll('.component')
+//const menuItems = document.querySelectorAll('.component')
 
-*menuItems.forEach(item =>
+/*menuItems.forEach(item =>
   item.addEventListener('click', function () {
     menuItems.forEach(item => item.classList.remove('selected'))
     this.classList.add('selected')
@@ -41,7 +41,7 @@ for (let progressBar of progressBars) {
 
   progressBar.setAttribute(
     'style',
-    width: ${demographic[${progressBarName}]}%
+    `width: ${demographic[`${progressBarName}`]}%`
   )
 }
 
@@ -59,7 +59,7 @@ for (let channel of channels) {
   const channelName = channel.textContent
   const bar = channel.parentElement.childNodes[9].childNodes[1]
 
-  bar.setAttribute('style', width: ${topChannels[${channelName}]}%)
+  bar.setAttribute('style', `width: ${topChannels[`${channelName}`]}%`)
 }
 
 // --- CHARTS.JS --- //
@@ -432,10 +432,10 @@ const genericOptions = {
       usePointStyle: true,
       callbacks: {
         title: ctx => {
-          return ${ctx[0].label}
+          return `${ctx[0].label}`
         },
         label: ctx => {
-          return ${ctx.dataset.label}:  ${ctx.raw} ppm
+          return `${ctx.dataset.label}:  ${ctx.raw} ppm`
         }
       }
     }
@@ -548,7 +548,7 @@ function mudaFiltro(filtro) {
       
         progressBar.setAttribute(
           'style',
-          width: ${demographic[${progressBarName}]}%
+          `width: ${demographic[`${progressBarName}`]}%`
         )
       }
     }
@@ -572,7 +572,7 @@ function mudaFiltro(filtro) {
       
         progressBar.setAttribute(
           'style',
-          width: ${demographic_Week[${progressBarName}]}%
+          `width: ${demographic_Week[`${progressBarName}`]}%`
         )
       }
     }
@@ -596,7 +596,7 @@ function mudaFiltro(filtro) {
       
         progressBar.setAttribute(
           'style',
-          width: ${demographic_Month[${progressBarName}]}%
+          `width: ${demographic_Month[`${progressBarName}`]}%`
         )
       }
     }
