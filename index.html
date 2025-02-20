@@ -1,172 +1,172 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-<meta charset="UTF-8" />
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
- 
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <!-- Google Fonts -->
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@700&family=Poppins:wght@400;600;700;900&display=swap"
       rel="stylesheet"
     />
- 
+
     <!-- CSS -->
-<link rel="stylesheet" href="styles.css" />
- 
+    <link rel="stylesheet" href="styles.css" />
+
     <title>Dashboard</title>
-</head>
-<body>
-<div class="container">
-<header id="main-menu">
-<h2>Dashboard</h2>
-<div class="top-menu hidden">
-<div>
-<img src="assets/icons/avatar.svg" alt="avatar" />
-<p>Conta</p>
-</div>
-<div>
-<img src="assets/icons/chevron-down.svg" alt="dropdown" />
-</div>
-</div>
-</header>
- 
+  </head>
+  <body>
+    <div class="container">
+      <header id="main-menu">
+        <h2>Dashboard</h2>
+        <div class="top-menu hidden">
+          <div>
+            <img src="assets/icons/avatar.svg" alt="avatar" />
+            <p>Conta</p>
+          </div>
+          <div>
+            <img src="assets/icons/chevron-down.svg" alt="dropdown" />
+          </div>
+        </div>
+      </header>
+
       <!--<nav id="side-menu">
-<div class="nav">
-<div class="container-menu">
-<div class="logo">
-<div>
-<img src="assets/icons/bolt-circle.svg" alt="" />
-</div>
-<p>Dash</p>
-<img
+        <div class="nav">
+          <div class="container-menu">
+            <div class="logo">
+              <div>
+                <img src="assets/icons/bolt-circle.svg" alt="" />
+              </div>
+              <p>Dash</p>
+              <img
                 class="icon chevron-icon"
                 src="assets/icons/chevron-left.svg"
                 alt=""
               />
-</div>
- 
+            </div>
+
             <div class="components">
-<div class="main-menu">
-<div class="component">
-<img src="assets/icons/dashboard.svg" alt="" />
-<p class="text-menu">Dashboard</p>
-</div>
-</div>
- 
+              <div class="main-menu">
+                <div class="component">
+                  <img src="assets/icons/dashboard.svg" alt="" />
+                  <p class="text-menu">Dashboard</p>
+                </div>
+              </div>
+
               <div class="workspace">
-<div class="component">
-<img src="assets/icons/accounts.svg" alt="" />
-<p class="text-menu">Contas</p>
-</div>
-</div>
- 
+                <div class="component">
+                  <img src="assets/icons/accounts.svg" alt="" />
+                  <p class="text-menu">Contas</p>
+                </div>
+              </div>
+
               <div class="general">
-<div class="component">
-<img src="assets/icons/settings.svg" alt="" />
-<p class="text-menu">Configurações</p>
-</div>
-</div>
-</div>
-</div>
-</div>
-</nav>-->
- 
+                <div class="component">
+                  <img src="assets/icons/settings.svg" alt="" />
+                  <p class="text-menu">Configurações</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>-->
+
       <main>
-<section id="main-chart">
-<header>
-<div class="wrapper-reach">
-<div class="card-reach">
-<div class="box-image total-reach">
-<img src="assets/icons/rectangle.svg" alt="" />
-<img src="assets/icons/polygon.svg" alt="" />
-</div>
-<div class="text-reach">
-<h3>Análise do dia</h3>
-</div>
-</div>
-</div>
- 
+        <section id="main-chart">
+          <header>
+            <div class="wrapper-reach">
+              <div class="card-reach">
+                <div class="box-image total-reach">
+                  <img src="assets/icons/rectangle.svg" alt="" />
+                  <img src="assets/icons/polygon.svg" alt="" />
+                </div>
+                <div class="text-reach">
+                  <h3>Análise do dia</h3>
+                </div>
+              </div>
+            </div>
+
             <div class="wrapper-filter">
-<div class="filters">
-<div class="filter selected" aria-label="day" onclick="mudaFiltro(this)">
-<p>Diário</p>
-</div>
-<div class="filter" aria-label="week" onclick="mudaFiltro(this)">
-<p>Semanal</p>
-</div>
-<div class="filter" aria-label="month" onclick="mudaFiltro(this)">
-<p>Mensal</p>
-</div>
-</div>
-</div>
-</header>
-<div class="chart">
-<canvas id="chartMain" width="700" height="200"> </canvas>
-</div>
-<div class="d"></div>
-</section>
- 
+              <div class="filters">
+                <div class="filter selected" aria-label="day" onclick="mudaFiltro(this)">
+                  <p>Diário</p>
+                </div>
+                <div class="filter" aria-label="week" onclick="mudaFiltro(this)">
+                  <p>Semanal</p>
+                </div>
+                <div class="filter" aria-label="month" onclick="mudaFiltro(this)">
+                  <p>Mensal</p>
+                </div>
+              </div>
+            </div>
+          </header>
+          <div class="chart">
+            <canvas id="chartMain" width="700" height="200"> </canvas>
+          </div>
+          <div class="d"></div>
+        </section>
+
         <section id="demographic">
-<header>
-<div class="title">
-<div>
-<img src="assets/icons/pipe.svg" alt="" />
-</div>
-<h3>Ranking e Umidade</h3>
-</div>
-</header>
-<div class="wrapper-demographic">
-<div class="chart-demographic">
-<canvas id="myChart" width="200" height="400"></canvas>
-<h5>Ranking</h5>
-</div>
-<div class="audience-age">
-<h4 class="title-audience">Média de umidade do dia</h4>
-<div class="progress-bar-group">
-<div class="first"></div>
-<div class="second"></div>
-</div>
-<div class="age-group">
-<div class="first-circle"></div>
-<div> Umidade</div>
-<h4> 83%</h4>
-</div>
-<div class="age-group">
-<div class="second-circle"></div>
-<div> Ar seco</div>
-<h4> 27%</h4>
-</div>
-</div>
-</div>
-</section>
- 
+          <header>
+            <div class="title">
+              <div>
+                <img src="assets/icons/pipe.svg" alt="" />
+              </div>
+              <h3>Ranking e Umidade</h3>
+            </div>
+          </header>
+          <div class="wrapper-demographic">
+            <div class="chart-demographic">
+              <canvas id="myChart" width="200" height="400"></canvas>
+              <h5>Ranking</h5>
+            </div>
+            <div class="audience-age">
+              <h4 class="title-audience">Média de umidade do dia</h4>
+              <div class="progress-bar-group">
+                <div class="first"></div>
+                <div class="second"></div>
+              </div>
+              <div class="age-group">
+                <div class="first-circle"></div>
+                <div> Umidade</div>
+                <h4> 83%</h4>
+              </div>
+              <div class="age-group">
+                <div class="second-circle"></div>
+                <div> Ar seco</div>
+                <h4> 27%</h4>
+              </div>
+            </div>
+          </div>
+        </section>
+
         <section id="top-channels">
-<header>
-<div class="title">
-<div>
-<img src="assets/icons/pipe.svg" alt="" />
-</div>
-<h3>Mín. e Máx. da Temperatura</h3>
-</div>
-</header>
-<div class="wrapper-channels">
-<div class="box">
-<div class="bar-1">
-<span class="barra_minimo">27°C</span>
-</div>
-<div class="bar-2">
-<span class="barra_maximo">35°C</span>
-</div>
-</div>
-</div>
-</section>
-</main>
-</div>
- 
+          <header>
+            <div class="title">
+              <div>
+                <img src="assets/icons/pipe.svg" alt="" />
+              </div>
+              <h3>Mín. e Máx. da Temperatura</h3>
+            </div>
+          </header>
+          <div class="wrapper-channels">
+            <div class="box">
+              <div class="bar-1">
+                <span class="barra_minimo">27°C</span>
+              </div>
+              <div class="bar-2">
+                <span class="barra_maximo">35°C</span>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.6.0/chart.min.js"></script>
-<script src="main.js"></script>
-</body>
+    <script src="main.js"></script>
+  </body>
 </html>
