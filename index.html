@@ -9,17 +9,19 @@
 <body>
   <header>
     <div class="title">
-      <div><img src="logo.png" alt="Logo"></div>
+      <div><img src="logo.png" alt="Logo da empresa"></div>
       <h3>Dashboard</h3>
     </div>
   </header>
+  
   <main>
-    <div id="main-chart">
+    <!-- Main Chart Section -->
+    <section id="main-chart">
       <header>
         <div class="wrapper-reach">
           <div class="card-reach">
             <div class="box-image total-reach">
-              <img src="reach-icon.svg" alt="Total Reach">
+              <img src="reach-icon.svg" alt="Ícone de Alcance Total">
             </div>
             <div class="text-reach">
               <h3>200k</h3>
@@ -28,7 +30,7 @@
           </div>
           <div class="card-reach">
             <div class="box-image total-paid">
-              <img src="paid-icon.svg" alt="Total Paid">
+              <img src="paid-icon.svg" alt="Ícone de Pagamento Total">
             </div>
             <div class="text-reach">
               <h3>50k</h3>
@@ -37,7 +39,7 @@
           </div>
           <div class="card-reach">
             <div class="box-image total-organic">
-              <img src="organic-icon.svg" alt="Total Organic">
+              <img src="organic-icon.svg" alt="Ícone de Orgânico Total">
             </div>
             <div class="text-reach">
               <h3>150k</h3>
@@ -45,6 +47,7 @@
             </div>
           </div>
         </div>
+
         <div class="wrapper-filter">
           <div class="filters">
             <div class="filter selected">
@@ -59,9 +62,10 @@
           </div>
         </div>
       </header>
-    </div>
+    </section>
 
-    <div id="demographic">
+    <!-- Demographic Overview Section -->
+    <section id="demographic">
       <header>
         <h4>Demographic Overview</h4>
       </header>
@@ -73,9 +77,10 @@
           </div>
         </div>
       </div>
-    </div>
+    </section>
 
-    <div id="top-channels">
+    <!-- Top Channels Section -->
+    <section id="top-channels">
       <header>
         <h5>Top Channels</h5>
       </header>
@@ -93,11 +98,12 @@
           <p>50k Reach</p>
         </div>
       </div>
-    </div>
+    </section>
   </main>
+
   <script src="chart.js"></script>
   <script>
-    // Initialize chart here
+    // Initialize chart
     var ctx = document.getElementById('ageChart').getContext('2d');
     var ageChart = new Chart(ctx, {
       type: 'pie',
