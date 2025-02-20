@@ -1,18 +1,18 @@
 // --- ITEM SELECTED | SIDE MENU --- //
 const menuItems = document.querySelectorAll('.component')
- 
+
 *menuItems.forEach(item =>
   item.addEventListener('click', function () {
     menuItems.forEach(item => item.classList.remove('selected'))
     this.classList.add('selected')
   })
 )
- 
+
 // --- HIDDEN | SIDE MENU --- //
 const sideMenu = document.querySelector('.nav')
 const button = document.querySelector('.chevron-icon')
 const container = document.querySelector('.container')
- 
+
 button.addEventListener('click', () => {
   sideMenu.classList.toggle('hidden')
   container.classList.toggle('changed')
@@ -23,28 +23,28 @@ const demographic = {
   first: 83,
   second: 27
 }
- 
+
 const demographic_Week = {
   first: 22,
   second: 78
 }
- 
+
 const demographic_Month = {
   first: 90,
   second: 10
 }
- 
+
 const progressBars = document.querySelectorAll('.progress-bar-group div')
- 
+
 for (let progressBar of progressBars) {
   const progressBarName = progressBar.className
- 
+
   progressBar.setAttribute(
     'style',
-    `width: ${demographic[`${progressBarName}`]}%`
+    width: ${demographic[${progressBarName}]}%
   )
 }
- 
+
 // --- PROGRESS BAR | TOP CHANNEL --- //
 const topChannels = {
   Facebook: 70,
@@ -52,20 +52,20 @@ const topChannels = {
   Linkedin: 90,
   Youtube: 30
 }
- 
+
 const channels = document.querySelectorAll('.channel-name')
- 
+
 for (let channel of channels) {
   const channelName = channel.textContent
   const bar = channel.parentElement.childNodes[9].childNodes[1]
- 
-  bar.setAttribute('style', `width: ${topChannels[`${channelName}`]}%`)
+
+  bar.setAttribute('style', width: ${topChannels[${channelName}]}%)
 }
- 
+
 // --- CHARTS.JS --- //
 // Doughnut //
 const doughnutChart = document.getElementById('myChart')
- 
+
 const dataDoughnut = {
   labels: ['Amônia', 'CO2', 'Benzeno', 'Óxido Nítrico'],
   datasets: [
@@ -117,13 +117,13 @@ const dataDoughnut_Month = {
     }
   ]
 }
- 
+
 const configDoughnut = {
   type: 'doughnut',
   data: dataDoughnut,
   options: {
     responsive: true,
- 
+
     plugins: {
       legend: {
         position: 'bottom',
@@ -151,7 +151,7 @@ const configDoughnut_Week = {
   data: dataDoughnut_Week,
   options: {
     responsive: true,
- 
+
     plugins: {
       legend: {
         position: 'bottom',
@@ -179,7 +179,7 @@ const configDoughnut_Month = {
   data: dataDoughnut_Month,
   options: {
     responsive: true,
- 
+
     plugins: {
       legend: {
         position: 'bottom',
@@ -198,16 +198,16 @@ const configDoughnut_Month = {
         enable: false,
         position: 'average',
         external: 'abc'
-        }
+      }
     }
   }
 }
- 
+
 const myChart = new Chart(doughnutChart, configDoughnut)
 //let random = Math.floor(Math.random() * (412 - 287));
 // Line //
 const lineChart = document.getElementById('chartMain')
- 
+
 const dataLine = {
   labels: [
     '0h',
@@ -266,7 +266,7 @@ const dataLine = {
     }
   ]
 }
- 
+
 const dataLine_Week = {
   labels: [
     '0h',
@@ -325,7 +325,7 @@ const dataLine_Week = {
     }
   ]
 }
- 
+
 const dataLine_Month = {
   labels: [
     '0h',
@@ -384,7 +384,7 @@ const dataLine_Month = {
     }
   ]
 }
- 
+
 const genericOptions = {
   responsive: true,
   hoverBackgroundColor: 'white',
@@ -398,7 +398,7 @@ const genericOptions = {
       max: 600,
       ticks: { stepSize: 100 },
       grid: { borderDash: [5, 5] }
-        }
+    }
   },
   layout: {
     padding: {
@@ -432,16 +432,16 @@ const genericOptions = {
       usePointStyle: true,
       callbacks: {
         title: ctx => {
-          return `${ctx[0].label}`
+          return ${ctx[0].label}
         },
         label: ctx => {
-          return `${ctx.dataset.label}:  ${ctx.raw} ppm`
+          return ${ctx.dataset.label}:  ${ctx.raw} ppm
         }
       }
     }
   }
 }
- 
+
 const annotationLine = {
   id: 'annotationLine',
   beforeDraw: chart => {
@@ -450,12 +450,12 @@ const annotationLine = {
       ctx.save()
       const activePoint = chart.tooltip._active[0]
       const display = lineChart.getContext('2d')
- 
+
       const gradient = display.createLinearGradient(0, 0, 0, 330)
- 
+
       gradient.addColorStop(0, 'rgba(37, 75, 209, 0)')
       gradient.addColorStop(1, 'rgba(37, 75, 209, 0.1)')
- 
+
       ctx.beginPath()
       ctx.moveTo(activePoint.element.x, chart.chartArea.top)
       ctx.lineTo(activePoint.element.x, chart.chartArea.bottom)
@@ -467,7 +467,7 @@ const annotationLine = {
     }
   }
 }
- 
+
 const lineDash = {
   id: 'lineDash',
   beforeDraw: chart => {
@@ -475,7 +475,7 @@ const lineDash = {
       const ctx = chart.ctx
       ctx.save()
       const activePoint = chart.tooltip._active[0]
- 
+
       ctx.beginPath()
       ctx.setLineDash([5, 5])
       ctx.moveTo(activePoint.element.x, chart.chartArea.top)
@@ -487,30 +487,30 @@ const lineDash = {
     }
   }
 }
- 
+
 const configLine = {
   type: 'line',
   data: dataLine,
   options: genericOptions,
   plugins: [annotationLine, lineDash]
 }
- 
+
 const configLine_Week = {
   type: 'line',
   data: dataLine_Week,
   options: genericOptions,
   plugins: [annotationLine, lineDash]
 }
- 
+
 const configLine_Month = {
   type: 'line',
   data: dataLine_Month,
   options: genericOptions,
   plugins: [annotationLine, lineDash]
 }
- 
+
 const chartMain = new Chart(lineChart, configLine)
- 
+
 function mudaFiltro(filtro) {
   const filtros = document.querySelectorAll(".filter");
   const titGrafico = document.querySelector(".text-reach h3");
@@ -519,15 +519,15 @@ function mudaFiltro(filtro) {
   const barTwo = document.querySelector(".bar-2");
   const barVal1 = document.querySelector(".barra_minimo");
   const barVal2 = document.querySelector(".barra_maximo");
- 
+
   if(!filtro.classList.contains("selected")){
- 
+
     for(let i=0;i < filtros.length;i++){
       if(filtros[i].classList.contains("selected")){
         filtros[i].classList.remove("selected");
       }
     }
- 
+
     filtro.classList.add("selected");
     if(filtro.getAttribute("aria-label") == "day"){
       titGrafico.innerHTML = "Análise do dia";
@@ -536,22 +536,23 @@ function mudaFiltro(filtro) {
       barVal2.innerHTML = "35°C";
       barOne.style.height = "130px";
       barTwo.style.height = "180px";
- 
+
       myChart.config.data = dataDoughnut;
       myChart.update();
- 
+
       chartMain.config.data = dataLine;
       chartMain.update();
- 
+
       for (let progressBar of progressBars) {
         const progressBarName = progressBar.className
+      
         progressBar.setAttribute(
           'style',
-          `width: ${demographic[`${progressBarName}`]}%`
+          width: ${demographic[${progressBarName}]}%
         )
       }
     }
- 
+
     if(filtro.getAttribute("aria-label") == "week"){
       titGrafico.innerHTML = "Análise da semana";
       titBarra.innerHTML = "Média de umidade da semana";
@@ -559,22 +560,23 @@ function mudaFiltro(filtro) {
       barVal2.innerHTML = "38°C";
       barOne.style.height = "100px";
       barTwo.style.height = "170px";
- 
+
       myChart.config.data = dataDoughnut_Week;
       myChart.update();
- 
+
       chartMain.config.data = dataLine_Week;
       chartMain.update();
- 
+
       for (let progressBar of progressBars) {
         const progressBarName = progressBar.className
+      
         progressBar.setAttribute(
           'style',
-          `width: ${demographic_Week[`${progressBarName}`]}%`
+          width: ${demographic_Week[${progressBarName}]}%
         )
       }
     }
- 
+
     if(filtro.getAttribute("aria-label") == "month"){
       titGrafico.innerHTML = "Análise do mês";
       titBarra.innerHTML = "Média de umidade do mês";
@@ -582,20 +584,22 @@ function mudaFiltro(filtro) {
       barVal2.innerHTML = "32°C";
       barOne.style.height = "140px";
       barTwo.style.height = "150px";
- 
+
       myChart.config.data = dataDoughnut_Month;
       myChart.update();
- 
+
       chartMain.config.data = dataLine_Month;
       chartMain.update();
- 
+
       for (let progressBar of progressBars) {
         const progressBarName = progressBar.className
+      
         progressBar.setAttribute(
           'style',
-          `width: ${demographic_Month[`${progressBarName}`]}%`
+          width: ${demographic_Month[${progressBarName}]}%
         )
       }
     }
   }
+  
 }
